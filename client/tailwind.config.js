@@ -88,6 +88,10 @@ export default {
       backgroundColor: {
         main: "#FCFCFE",
         dark: "#160404",
+=======
+        "color-gray-400": "#D6D9E4",
+        "color-gray-900": "#2A2E3F",
+>>>>>>> 6ee509c (style: add tailwind style on input of user profile form)
       },
 =======
 >>>>>>> 84ae46f (feat: add feature in admin page)
