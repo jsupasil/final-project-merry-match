@@ -15,6 +15,7 @@ import MatchingPage from "./components/MatchingPage";
 =======
 import Nav from "./nav";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   BrowserRouter,
@@ -28,10 +29,13 @@ import {
 >>>>>>> 84ae46f (feat: add feature in admin page)
 =======
 =======
+=======
+>>>>>>> 6cc152f (feat create ui login,footer,matching page)
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import MatchingPage from "./components/MatchingPage";
+<<<<<<< HEAD
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 >>>>>>> 6069247 (feat create ui login,footer,matching page)
 >>>>>>> 872bcbc (feat create ui login,footer,matching page)
@@ -62,6 +66,10 @@ function App() {
 <<<<<<< HEAD
 =======
 >>>>>>> 33f7ac3 (feat: add feature in admin page)
+=======
+
+function App() {
+>>>>>>> 6cc152f (feat create ui login,footer,matching page)
   return (
     <>
       <BrowserRouter>
@@ -69,8 +77,11 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 84ae46f (feat: add feature in admin page)
+=======
+>>>>>>> 14f909b (feat create ui login,footer,matching page)
           <Route path="/" element={<LandingPage />} />
           <Route path="/package/add" element={<AddPackagePage />} />
           <Route path="/package/view" element={<PackageListPage />} />
@@ -82,6 +93,7 @@ function App() {
           <Route path="/home-login" element={<HomeUserLogin />} />
 =======
           <Route path="/" element={<Nav />} />
+<<<<<<< HEAD
           <Route path="/landing" element={<LandingPage />} />
           <Route path="/package/add" element={<AddPackagePage />} />
           <Route path="/package/view" element={<PackageListPage />} />
@@ -98,10 +110,17 @@ function App() {
           <Route path="/page" element={<NavUser />} />
           <Route path="/home-login" element={<HomeUserLogin />} />
 >>>>>>> 8a123ae (rebase dev)
+=======
+
+          {/* <Route path="/page" element={<Page />} /> */}
+          <MatchingPage />
+>>>>>>> 6cc152f (feat create ui login,footer,matching page)
+>>>>>>> 14f909b (feat create ui login,footer,matching page)
         </Routes>
       </BrowserRouter>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return <>
@@ -134,3 +153,6 @@ export default App;
 
 export default App
 >>>>>>> c570cdf (feat: crud admin at app.mjs)
+=======
+}
+>>>>>>> 6cc152f (feat create ui login,footer,matching page)

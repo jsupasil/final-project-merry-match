@@ -1,4 +1,5 @@
 import express from "express";
+<<<<<<< HEAD
 import connectionPool from "./src/utils/db.mjs";
 import registerRouter from "../server/src/routes/register.mjs";
 <<<<<<< HEAD
@@ -440,4 +441,18 @@ app.delete("/admin/delete/:package_id", async (req, res) => {
 >>>>>>> 198e40e (feat: crud admin at app.mjs)
 app.listen(port, () => {
   console.log(`Server is running at ${port}`);
+=======
+
+const app = express();
+const port = 4000;
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  return res.send("Merry Match!!");
+});
+
+app.listen(port, () => {
+  console.log(`Server is running at the port ${port}`);
+>>>>>>> 18a4103 (feat create ui login,footer,matching page)
 });

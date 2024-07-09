@@ -2,9 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 14f909b (feat create ui login,footer,matching page)
     "start": "nodemon app.mjs"
 =======
 <<<<<<< HEAD
@@ -13,10 +17,14 @@
 =======
     "start": "nodemon app.mjs"
 >>>>>>> 18a4103 (feat create ui login,footer,matching page)
+<<<<<<< HEAD
 >>>>>>> 872bcbc (feat create ui login,footer,matching page)
 =======
     "start": "nodemon app.mjs"
 >>>>>>> 198e40e (feat: crud admin at app.mjs)
+=======
+>>>>>>> 6cc152f (feat create ui login,footer,matching page)
+>>>>>>> 14f909b (feat create ui login,footer,matching page)
   },
   "keywords": [],
   "author": "",
