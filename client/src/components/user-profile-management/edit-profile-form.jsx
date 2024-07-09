@@ -821,7 +821,11 @@ function EditProfileForm() {
           </div>
         </div>
       </form>
+<<<<<<< HEAD
 >>>>>>> 2b09a65 (rebase)
+=======
+>>>>>>> 6091c76 (rebase)
+>>>>>>> 0617cdb (rebase)
     </>
   );
 }

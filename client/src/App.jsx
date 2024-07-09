@@ -16,6 +16,7 @@ import MatchingPage from "./components/MatchingPage";
 import Nav from "./nav";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   BrowserRouter,
@@ -143,6 +144,25 @@ function App() {
 =======
           <Route path="/user/:userId/edit" element={<EditProfilePage />} />
 >>>>>>> 16e62b6 (rebase)
+=======
+import EditProfilePage from "./pages/user-profile-management/edit-profile-page.jsx";
+import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Nav />} />
+          <Route path="/user/:userId/edit" element={<EditProfilePage />} />
+
+          {/* <Route path="/page" element={<Page />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
+>>>>>>> 6091c76 (rebase)
 
           {/* <Route path="/page" element={<Page />} /> */}
         </Routes>
