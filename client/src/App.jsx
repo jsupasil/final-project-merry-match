@@ -43,10 +43,12 @@ import PackageListPage from "./component/packagelist";
 import AddPackagePage from "./component/addpackage";
 import EditPackage from "./component/editpackage";
 import EditProfilePage from "./pages/user-profile-management/edit-profile-page.jsx";
+<<<<<<< HEAD
 import RegisterPage from "./pages/non-user/register-page.jsx";
 import NavUser from "./pages/user-profile-management/navUser.jsx";
 import HomeUserLogin from "./pages/user-profile-management/home-login.jsx";
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 8a123ae (rebase dev)
 import PackageListPage from "./component/packagelist";
@@ -60,6 +62,9 @@ import RegisterPage from "./pages/non-user/register-page.jsx";
 import NavUser from "./pages/user-profile-management/navUser.jsx";
 import HomeUserLogin from "./pages/user-profile-management/home-login.jsx";
 >>>>>>> 8a123ae (rebase dev)
+=======
+>>>>>>> 16e62b6 (rebase)
+>>>>>>> 2b09a65 (rebase)
 
 function App() {
 <<<<<<< HEAD
@@ -133,7 +138,11 @@ function App() {
           <Route path="/package/add" element={<AddPackagePage />} />
           <Route path="/package/view" element={<PackageListPage />} />
           <Route path="/package/edit" element={<EditPackage />} />
+<<<<<<< HEAD
 >>>>>>> 33f7ac3 (feat: add feature in admin page)
+=======
+          <Route path="/user/:userId/edit" element={<EditProfilePage />} />
+>>>>>>> 16e62b6 (rebase)
 
           {/* <Route path="/page" element={<Page />} /> */}
         </Routes>
@@ -156,6 +165,7 @@ export default App;
 >>>>>>> 6069247 (feat create ui login,footer,matching page)
 =======
 
+<<<<<<< HEAD
 export default App
 >>>>>>> c570cdf (feat: crud admin at app.mjs)
 =======
@@ -165,3 +175,6 @@ export default App
 
 export default App
 >>>>>>> 0ccb2dd (feat: crud admin at app.mjs)
+=======
+export default App;
+>>>>>>> 16e62b6 (rebase)
