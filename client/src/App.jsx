@@ -32,6 +32,7 @@ import HomeUserLogin from "./pages/user-profile-management/home-login.jsx";
 >>>>>>> 8a123ae (rebase dev)
 
 function App() {
+<<<<<<< HEAD
   return (
     <>
       <BrowserRouter>
@@ -69,5 +70,21 @@ function App() {
       </BrowserRouter>
     </>
   );
+=======
+  return <>
+
+   <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Nav/>}/>
+        <Route path="/package/add" element={<AddPackagePage/>}/>
+        <Route path="/package/view" element={<PackageListPage/>}/>
+
+        {/* <Route path="/page" element={<Page />} /> */}
+      </Routes>
+      </BrowserRouter>
+
+
+  </>;
+>>>>>>> 933cb57 (feat: add search icon on list package page)
 }
 export default App;
