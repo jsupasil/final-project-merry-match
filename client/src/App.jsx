@@ -14,6 +14,7 @@ import MatchingPage from "./components/MatchingPage";
 =======
 =======
 import Nav from "./nav";
+<<<<<<< HEAD
 
 import {
   BrowserRouter,
@@ -23,7 +24,17 @@ import {
   
 } from "react-router-dom";
 >>>>>>> 33f7ac3 (feat: add feature in admin page)
+<<<<<<< HEAD
 >>>>>>> 84ae46f (feat: add feature in admin page)
+=======
+=======
+import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
+import Footer from "./components/Footer";
+import Login from "./components/Login";
+import MatchingPage from "./components/MatchingPage";
+import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
+>>>>>>> 6069247 (feat create ui login,footer,matching page)
+>>>>>>> 872bcbc (feat create ui login,footer,matching page)
 import PackageListPage from "./component/packagelist";
 import AddPackagePage from "./component/addpackage";
 import EditPackage from "./component/editpackage";
@@ -91,6 +102,7 @@ function App() {
       </BrowserRouter>
     </>
   );
+<<<<<<< HEAD
 =======
   return <>
 =======
@@ -114,3 +126,6 @@ function App() {
 >>>>>>> 33f7ac3 (feat: add feature in admin page)
 }
 export default App;
+=======
+}
+>>>>>>> 6069247 (feat create ui login,footer,matching page)

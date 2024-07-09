@@ -2,8 +2,18 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon app.mjs"
+=======
+<<<<<<< HEAD
+    "start": "nodemon app.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "start": "nodemon app.mjs"
+>>>>>>> 18a4103 (feat create ui login,footer,matching page)
+>>>>>>> 872bcbc (feat create ui login,footer,matching page)
   },
   "keywords": [],
   "author": "",
