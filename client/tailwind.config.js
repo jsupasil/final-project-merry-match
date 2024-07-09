@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         red: {
           utility: "#AF2758",
           100: "#FFE1EA",
@@ -89,9 +90,22 @@ export default {
         main: "#FCFCFE",
         dark: "#160404",
 =======
+=======
+        "color-red-utility": "#AF2758",
+        "color-gray-200": "#F1F2F6",
+>>>>>>> 1f93ac5 (feat,style: add upload image section)
         "color-gray-400": "#D6D9E4",
+        "color-gray-700": "#646D89",
+        "color-gray-800": "#424C6B",
         "color-gray-900": "#2A2E3F",
+<<<<<<< HEAD
 >>>>>>> 6ee509c (style: add tailwind style on input of user profile form)
+=======
+        "color-purple-100": "#F4EBF2",
+        "color-purple-500": "#A62D82",
+        "color-purple-600": "#7D2262",
+        "color-beige-700": "#7B4429",
+>>>>>>> 1f93ac5 (feat,style: add upload image section)
       },
 =======
 >>>>>>> 84ae46f (feat: add feature in admin page)
