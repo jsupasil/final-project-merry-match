@@ -1,5 +1,6 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import drag from "../assets/icons/drag.png";
 import { useState } from "react";
 import X from "../assets/icons/X.png";
@@ -60,17 +61,25 @@ const AdminAddPackagePage = () => {
       <div className="flex flex-row">
         <div className="grow shrink basis-0 text-slate-800 text-2xl font-bold ">
 =======
+=======
+import drag from "../assets/icons/drag.png"
+>>>>>>> 8a123ae (rebase dev)
 
 const AdminAddPackagePage = () => {
   return (
-    <nav className="w-[90%] h-20 px-[60px] py-4 bg-white border-b border-gray-300 justify-start item-end inline-flex flex-col">
+    <section className="w-[90%] h-20 px-[60px] py-4 bg-white border-b border-gray-300 justify-start item-end inline-flex flex-col">
       <div className="flex flex-row">
+<<<<<<< HEAD
         <div className="grow shrink basis-0 text-slate-800 text-2xl font-bold  leading-[30px]">
 >>>>>>> 6e1b356 (feat: create admin page about list package)
+=======
+        <div className="grow shrink basis-0 text-slate-800 text-2xl font-bold ">
+>>>>>>> 8a123ae (rebase dev)
           Add Package
         </div>
         <div className="justify-start items-start gap-4 flex">
           <div className="px-6 py-3 bg-rose-100 rounded-[99px] shadow justify-center items-center gap-2 flex">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <button
               className="text-center text-rose-800 text-base font-bold "
@@ -79,21 +88,29 @@ const AdminAddPackagePage = () => {
 =======
             <button className="text-center text-rose-800 text-base font-bold font-['Nunito'] leading-normal">
 >>>>>>> 6e1b356 (feat: create admin page about list package)
+=======
+            <button className="text-center text-rose-800 text-base font-bold ">
+>>>>>>> 8a123ae (rebase dev)
               Cancel
             </button>
           </div>
           <div className="px-6 py-3 bg-rose-700 rounded-[99px] shadow justify-center items-center gap-2 flex">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button type="sumbit" onClick={handleSubmit} className="text-center text-white text-base font-bold ">
 =======
             <button className="text-center text-white text-base font-bold font-['Nunito'] leading-normal">
 >>>>>>> 6e1b356 (feat: create admin page about list package)
+=======
+            <button className="text-center text-white text-base font-bold ">
+>>>>>>> 8a123ae (rebase dev)
               Create
             </button>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className=" flex rounded-2xl flex-col mt-[100px]">
         <label className="grid grid-cols-2 gap-x-10">
@@ -220,21 +237,25 @@ const AdminAddPackagePage = () => {
             <span className="label-text relative right-24 bottom-2 text-[16px]">
               Package Name*
             </span>
+=======
+      <div className=" flex rounded-2xl flex-col mt-[100px]">
+        <label className="grid grid-cols-2 gap-x-10">
+          <div className="flex flex-col">
+            <p className=" w-full text-[16px]">Package Name*</p>
+>>>>>>> 8a123ae (rebase dev)
             <input
               type="text"
-              placeholder="Type here"
-              className="input input-bordered bg-white w-[1000px] max-w-xs"
+              placeholder=""
+              className="input input-bordered bg-white w-full "
             />
           </div>
 
-          <div className="label flex flex-col">
-            <span className="label-text relative  right-24 bottom-2 text-[16px]">
-              Merry limit*
-            </span>
+          <div className="flex flex-col">
+            <p className=" w-full text-[16px]">Merry limit*</p>
             <input
               type="text"
-              placeholder="Type here"
-              className="input input-bordered bg-white w-[1000px] max-w-xs"
+              placeholder=""
+              className="input input-bordered bg-white w-full"
             />
           </div>
         </label>
@@ -244,38 +265,44 @@ const AdminAddPackagePage = () => {
           </div>
           <input
             type="image"
+            placeholder="Uploud Icon"
             className="input input-bordered bg-white w-[120px] h-[100px] max-w-xs"
           />
-          <button className="relative bottom-24 right-2 bg-red-600 w-4 h-4 rounded-full">
-            X
-          </button>
+          
         </label>
 
-        <label className="form-control mt-10 w-full max-w-xs">
+        <label className="form-control mt-10 w-full ">
           <h1>Package Detail</h1>
           <div className="label mt-10 ">
-            <span className="label-text">Detail</span>
+            <p className="label-text">Detail</p>
           </div>
           <div className="flex flex-row">
+            <img className="relative bottom-4" src={drag} alt="" />
             <input
               type="text"
-              placeholder="Type here"
-              className="input input-bordered w-[500px] "
+              placeholder=""
+              className="input input-bordered bg-white w-full"
             />
-            <span className="label-text">Delete</span>
+            <a href="">
+              <span className="ml-4">Delete</span>
+            </a>
           </div>
           <div className="px-[50px] flex-col justify-start items-start gap-2 flex mt-10 relative right-14 ">
-      <button className="px-6 py-3 bg-rose-100 rounded-[99px] shadow justify-center items-center gap-2 inline-flex">
-        <div className="text-center text-rose-800 text-base font-bold font-['Nunito'] leading-normal">+ Add detail</div>
-      </button>
-    </div>
+            <button className="px-6 py-3 bg-rose-100 rounded-[99px] shadow justify-center items-center gap-2 inline-flex">
+              <div className="text-center text-rose-800 text-base font-bold  ">
+                + Add detail
+              </div>
+            </button>
+          </div>
         </label>
-        
       </div>
-    </nav>
+    </section>
   );
 };
 
+<<<<<<< HEAD
 
 >>>>>>> 6e1b356 (feat: create admin page about list package)
+=======
+>>>>>>> 8a123ae (rebase dev)
 export default AdminAddPackagePage;
