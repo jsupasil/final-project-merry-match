@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         red: {
           utility: "#AF2758",
           100: "#FFE1EA",
@@ -55,6 +56,8 @@ export default {
         },
         white: "#FFFFFF",
         black: "#000000",
+=======
+>>>>>>> 84ae46f (feat: add feature in admin page)
         "color-red-utility": "#AF2758",
         "color-red-100": "#FFE1EA",
         "color-red-500": "#C70039",
@@ -77,6 +80,7 @@ export default {
       boxShadow: {
         primary: "2px 2px 12px 0px rgba(64, 50, 133, 0.12)",
       },
+<<<<<<< HEAD
       backgroundImage: {
         customGradient:
           "radial-gradient(106.64% 594.8% at 3.13% 0%, #742138 23.43%, #A878BF 100%)",
@@ -85,6 +89,8 @@ export default {
         main: "#FCFCFE",
         dark: "#160404",
       },
+=======
+>>>>>>> 84ae46f (feat: add feature in admin page)
     },
   },
   plugins: [require("daisyui")],

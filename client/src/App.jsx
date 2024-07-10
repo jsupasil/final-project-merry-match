@@ -1,4 +1,5 @@
 import "./App.css";
+<<<<<<< HEAD
 import LandingPage from "./components/landing-page.jsx";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,20 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import MatchingPage from "./components/MatchingPage";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import Nav from "./nav";
+
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  useParams,
+  
+} from "react-router-dom";
+>>>>>>> 33f7ac3 (feat: add feature in admin page)
+>>>>>>> 84ae46f (feat: add feature in admin page)
 import PackageListPage from "./component/packagelist";
 import AddPackagePage from "./component/addpackage";
 import EditPackage from "./component/editpackage";
@@ -33,12 +48,18 @@ import HomeUserLogin from "./pages/user-profile-management/home-login.jsx";
 
 function App() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 33f7ac3 (feat: add feature in admin page)
   return (
     <>
       <BrowserRouter>
         <Routes>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 84ae46f (feat: add feature in admin page)
           <Route path="/" element={<LandingPage />} />
           <Route path="/package/add" element={<AddPackagePage />} />
           <Route path="/package/view" element={<PackageListPage />} />
@@ -72,19 +93,24 @@ function App() {
   );
 =======
   return <>
+=======
+          <Route path="/" element={<Nav />} />
+          <Route path="/package/add" element={<AddPackagePage />} />
+          <Route path="/package/view" element={<PackageListPage />} />
+          <Route path="/package/edit" element={<EditPackage />} />
+>>>>>>> 33f7ac3 (feat: add feature in admin page)
 
-   <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Nav/>}/>
-        <Route path="/package/add" element={<AddPackagePage/>}/>
-        <Route path="/package/view" element={<PackageListPage/>}/>
-
-        {/* <Route path="/page" element={<Page />} /> */}
-      </Routes>
+          {/* <Route path="/page" element={<Page />} /> */}
+        </Routes>
       </BrowserRouter>
+<<<<<<< HEAD
 
 
   </>;
 >>>>>>> 933cb57 (feat: add search icon on list package page)
+=======
+    </>
+  );
+>>>>>>> 33f7ac3 (feat: add feature in admin page)
 }
 export default App;
