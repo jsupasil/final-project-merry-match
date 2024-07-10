@@ -2,13 +2,15 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 14f909b (feat create ui login,footer,matching page)
+=======
+>>>>>>> faa012f (feat: crud admin at app.mjs)
     "start": "nodemon app.mjs"
 =======
 <<<<<<< HEAD
@@ -24,7 +26,13 @@
 >>>>>>> 198e40e (feat: crud admin at app.mjs)
 =======
 >>>>>>> 6cc152f (feat create ui login,footer,matching page)
+<<<<<<< HEAD
 >>>>>>> 14f909b (feat create ui login,footer,matching page)
+=======
+=======
+    "start": "nodemon app.mjs"
+>>>>>>> 0ccb2dd (feat: crud admin at app.mjs)
+>>>>>>> faa012f (feat: crud admin at app.mjs)
   },
   "keywords": [],
   "author": "",
@@ -41,13 +49,22 @@
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "params": "^0.1.1",
 =======
+=======
+>>>>>>> faa012f (feat: crud admin at app.mjs)
 <<<<<<< HEAD
 =======
     "params": "^0.1.1",
 >>>>>>> c570cdf (feat: crud admin at app.mjs)
+<<<<<<< HEAD
 >>>>>>> 198e40e (feat: crud admin at app.mjs)
+=======
+=======
+    "params": "^0.1.1",
+>>>>>>> 0ccb2dd (feat: crud admin at app.mjs)
+>>>>>>> faa012f (feat: crud admin at app.mjs)
     "pg": "^8.12.0",
     "uuid": "^10.0.0"
   }

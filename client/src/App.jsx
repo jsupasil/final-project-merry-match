@@ -72,6 +72,7 @@ function App() {
 >>>>>>> 6cc152f (feat create ui login,footer,matching page)
   return (
     <>
+<<<<<<< HEAD
       <BrowserRouter>
         <Routes>
 <<<<<<< HEAD
@@ -118,6 +119,9 @@ function App() {
 >>>>>>> 14f909b (feat create ui login,footer,matching page)
         </Routes>
       </BrowserRouter>
+=======
+      <MatchingPage />
+>>>>>>> 0ccb2dd (feat: crud admin at app.mjs)
     </>
   );
 <<<<<<< HEAD
@@ -145,6 +149,7 @@ function App() {
 >>>>>>> 33f7ac3 (feat: add feature in admin page)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default App;
 =======
 }
@@ -156,3 +161,7 @@ export default App
 =======
 }
 >>>>>>> 6cc152f (feat create ui login,footer,matching page)
+=======
+
+export default App
+>>>>>>> 0ccb2dd (feat: crud admin at app.mjs)
