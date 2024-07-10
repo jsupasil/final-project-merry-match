@@ -108,7 +108,11 @@ export default {
 >>>>>>> 1f93ac5 (feat,style: add upload image section)
       },
 =======
+<<<<<<< HEAD
 >>>>>>> 84ae46f (feat: add feature in admin page)
+=======
+>>>>>>> 4c606ff (feat: delete pop up)
+>>>>>>> 39de4b3 (feat: delete pop up)
     },
   },
   plugins: [require("daisyui")],
