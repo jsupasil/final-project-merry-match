@@ -2,8 +2,8 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "start": "nodemon app.mjs"
 =======
@@ -14,6 +14,9 @@
     "start": "nodemon app.mjs"
 >>>>>>> 18a4103 (feat create ui login,footer,matching page)
 >>>>>>> 872bcbc (feat create ui login,footer,matching page)
+=======
+    "start": "nodemon app.mjs"
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
   },
   "keywords": [],
   "author": "",
@@ -29,7 +32,14 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.4",
+<<<<<<< HEAD
     "params": "^0.1.1",
+=======
+<<<<<<< HEAD
+=======
+    "params": "^0.1.1",
+>>>>>>> c570cdf (feat: crud admin at app.mjs)
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
     "pg": "^8.12.0",
     "uuid": "^10.0.0"
   }

@@ -1,11 +1,16 @@
 import express from "express";
-<<<<<<< HEAD
 import connectionPool from "./src/utils/db.mjs";
 import registerRouter from "../server/src/routes/register.mjs";
+<<<<<<< HEAD
 import profileRouter from "../server/src/routes/profile.mjs";
+<<<<<<< HEAD
 import loginRouter from "../server/src/routes/login.mjs";
 import supabase from "./lib/supabase.js";
 import cors from "cors";
+=======
+=======
+>>>>>>> c570cdf (feat: crud admin at app.mjs)
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
 
 const app = express();
 const port = 4001;
@@ -36,6 +41,11 @@ app.get("/users", async (req, res) => {
   return res.status(200).json({ data: result.rows });
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
 //admin can create
 app.post("/admin/create", async (req, res) => {
   const { packages_name, merry_limit, icons, detail } = req.body;
@@ -55,7 +65,11 @@ app.post("/admin/create", async (req, res) => {
 
   try {
     await connectionPool.query(
+<<<<<<< HEAD
       `insert into packages (packages_name,merry_limit,icons,detail,created_at,updated_at) values ($1,$2,$3,$4,$5,$6)`,
+=======
+      `insert into admin (packages_name,merry_limit,icons,detail,created_at,updated_at) values ($1,$2,$3,$4,$5,$6)`,
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
       [
         newPackages.packages_name,
         newPackages.merry_limit,
@@ -79,6 +93,7 @@ app.post("/admin/create", async (req, res) => {
 });
 
 //admin can read
+<<<<<<< HEAD
 // app.get("/admin/get", async (req, res) => {
 // let result;
 // try {
@@ -163,11 +178,23 @@ app.get("/admin/get/:package_id", async (req, res) => {
     return res.status(500).json({
       message: "The server has encountered a situation it does not know how to handle.",
       error: error.message,
+=======
+app.get("/admin/get", async (req, res) => {
+  let result;
+  try {
+    result = await connectionPool.query(`select*from admin`);
+    return res.status(200).json({ data: result.rows });
+  } catch {
+    return res.status(500).json({
+      message:
+        "The server has encountered a situation it does not know how to handle.",
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
     });
   }
 });
 
 //admin can update
+<<<<<<< HEAD
 // app.put("/admin/edit/:package_id", async (req, res) => {
 //   const packagesId = req.params.package_id;
 //   const { packages_name, merry_limit, icons, detail } = req.body;
@@ -237,10 +264,24 @@ app.put("/admin/edit/:package_id", async (req, res) => {
   if (typeof merry_limit !== "number") {
     return res.status(400).json({
       message: "'merry_limit' must be a number",
+=======
+app.put("/admin/edit/:package_id", async (req, res) => {
+  const packagesId = req.params.package_id;
+  const { packages_name, merry_limit, icons, detail } = req.body;
+  const updatePackages = {
+    ...req.body,
+    updated_at: new Date(),
+  };
+
+  if (!packages_name || !merry_limit || !icons) {
+    return res.status(400).json({
+      message: "Missing or invalid request data.",
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
     });
   }
 
   try {
+<<<<<<< HEAD
     const detailString = detail ? detail : "";
 
     const { data, error } = await supabase
@@ -269,6 +310,42 @@ app.put("/admin/edit/:package_id", async (req, res) => {
       packages: data[0],
     });
   } catch (error) {
+=======
+    const resultPackages = await connectionPool.query(
+      `select*from admin where package_id=$1`,
+      [packagesId]
+    );
+
+    if (resultPackages.rows.length === 0) {
+      return res.status(404).json({
+        message: `The server cannot find the requested resource. In the browser, this means the ${packagesId} is not recognized.`,
+      });
+    }
+
+    await connectionPool.query(
+      `update admin set packages_name =$2,
+      merry_limit=$3,
+      icons=$4,
+      detail=$5,
+      updated_at=$6
+      where package_id=$1
+      `,
+      [
+        packagesId,
+        updatePackages.packages_name,
+        updatePackages.merry_limit,
+        updatePackages.icons,
+        updatePackages.detail || null,
+        updatePackages.updated_at,
+      ]
+    );
+
+    return res.status(200).json({
+      message: "Successfully updated the data in merry match.",
+    });
+  } catch (error) {
+    console.error("Database insertion error:", error);
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
     return res.status(500).json({
       message:
         "The server has encountered a situation it does not know how to handle.",
@@ -277,6 +354,7 @@ app.put("/admin/edit/:package_id", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 
 
 
@@ -328,6 +406,21 @@ app.delete("/admin/delete/:package_id", async (req, res) => {
     });
   } catch (error) {
     console.error("Supabase deletion error:", error);
+=======
+//admin can delete
+app.delete("/admin/delete/:package_id", async (req, res) => {
+  const packagesId = req.params.package_id;
+  try {
+    await connectionPool.query(`delete from admin where package_id=$1`, [
+      packagesId,
+    ]);
+
+    return res.status(200).json({
+      message: `Successfully delete the package id: ${packagesId}`,
+    });
+  } catch (error) {
+    console.error("Database deletion error:", error);
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
     return res.status(500).json({
       message:
         "The server has encountered a situation it does not know how to handle.",
@@ -336,25 +429,15 @@ app.delete("/admin/delete/:package_id", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> c570cdf (feat: crud admin at app.mjs)
+>>>>>>> 198e40e (feat: crud admin at app.mjs)
 app.listen(port, () => {
   console.log(`Server is running at ${port}`);
-=======
-
-const app = express();
-const port = 4000;
-
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  return res.send("Merry Match!!");
-});
-
-app.listen(port, () => {
-  console.log(`Server is running at the port ${port}`);
->>>>>>> 18a4103 (feat create ui login,footer,matching page)
 });

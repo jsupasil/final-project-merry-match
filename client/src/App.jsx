@@ -125,7 +125,12 @@ function App() {
   );
 >>>>>>> 33f7ac3 (feat: add feature in admin page)
 }
+<<<<<<< HEAD
 export default App;
 =======
 }
 >>>>>>> 6069247 (feat create ui login,footer,matching page)
+=======
+
+export default App
+>>>>>>> c570cdf (feat: crud admin at app.mjs)
