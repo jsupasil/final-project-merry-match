@@ -6,6 +6,9 @@ export default {
       colors: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cdaa9cb (refactor: add tailwind config library)
         red: {
           utility: "#AF2758",
           100: "#FFE1EA",
@@ -57,8 +60,12 @@ export default {
         },
         white: "#FFFFFF",
         black: "#000000",
+<<<<<<< HEAD
 =======
 >>>>>>> 84ae46f (feat: add feature in admin page)
+=======
+<<<<<<< HEAD
+>>>>>>> a96c6d0 (refactor: add tailwind config library)
         "color-red-utility": "#AF2758",
         "color-red-100": "#FFE1EA",
         "color-red-500": "#C70039",
@@ -73,6 +80,8 @@ export default {
         "color-purple-500": "#A62D82",
         "color-purple-600": "#7D2262",
         "color-beige-700": "#7B4429",
+=======
+>>>>>>> cdaa9cb (refactor: add tailwind config library)
       },
       dropShadow: {
         primary: "2px 2px 12px rgba(64, 50, 133, 0.16)",
@@ -82,6 +91,9 @@ export default {
         primary: "2px 2px 12px 0px rgba(64, 50, 133, 0.12)",
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cdaa9cb (refactor: add tailwind config library)
       backgroundImage: {
         customGradient:
           "radial-gradient(106.64% 594.8% at 3.13% 0%, #742138 23.43%, #A878BF 100%)",
@@ -89,6 +101,7 @@ export default {
       backgroundColor: {
         main: "#FCFCFE",
         dark: "#160404",
+<<<<<<< HEAD
 =======
 =======
         "color-red-utility": "#AF2758",
@@ -112,7 +125,13 @@ export default {
 >>>>>>> 84ae46f (feat: add feature in admin page)
 =======
 >>>>>>> 4c606ff (feat: delete pop up)
+<<<<<<< HEAD
 >>>>>>> 39de4b3 (feat: delete pop up)
+=======
+=======
+      },
+>>>>>>> cdaa9cb (refactor: add tailwind config library)
+>>>>>>> a96c6d0 (refactor: add tailwind config library)
     },
   },
   plugins: [require("daisyui")],
