@@ -8,7 +8,11 @@ import NavUser from "./navUser.jsx";
 =======
 >>>>>>> 557e99d (feat: add upload image, update and delete button)
 import Nav from "../../nav.jsx";
+<<<<<<< HEAD
 >>>>>>> 0617cdb (rebase)
+=======
+import Footer from "../../components/Footer.jsx";
+>>>>>>> 46a9862 (style: complete style profile review pop up and responsive)
 
 function EditProfilePage() {
   return (
