@@ -1,13 +1,13 @@
 import female1 from "../assets/images/female1.png";
 import female2 from "../assets/images/female2.png";
 import content from "../assets/images/content.png";
-import containerhorizon from "../assets/images/containerhorizon.png";
 import heart from "../assets/images/heart.png";
 import emojismile from "../assets/images/emojismile.png";
 import emojisunglasses from "../assets/images/emojisunglasses.png";
 import emojiwowstar from "../assets/images/emojiwowstar.png";
 import emojiparty from "../assets/images/emojiparty.png";
 import emojilove from "../assets/images/emojilove.png";
+import containerhorizon from "../assets/images/containerhorizon.png";
 import containervertical from "../assets/images/containervertical.png";
 
 export function LandingPage() {

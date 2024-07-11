@@ -1,5 +1,6 @@
 import { Router } from "express";
 import connectionPool from "../utils/db.mjs";
+<<<<<<< HEAD
 import bcrypt from "bcrypt"
 
 const loginRouter = Router();
@@ -45,3 +46,9 @@ loginRouter.post("/", async (req, res) => {
   });
   
 export default loginRouter 
+=======
+
+const loginRouter = Router();
+
+export default loginRouter;
+>>>>>>> b304778 (feat:login)
