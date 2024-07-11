@@ -3,6 +3,7 @@ import connectionPool from "./src/utils/db.mjs";
 import registerRouter from "../server/src/routes/register.mjs";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import profileRouter from "../server/src/routes/profile.mjs";
 <<<<<<< HEAD
 import loginRouter from "../server/src/routes/login.mjs";
@@ -16,17 +17,30 @@ import cors from "cors";
 =======
 =======
 >>>>>>> 0ccb2dd (feat: crud admin at app.mjs)
+<<<<<<< HEAD
 >>>>>>> faa012f (feat: crud admin at app.mjs)
+=======
+=======
+import loginRouter from '../server/src/routes/login.mjs'
+>>>>>>> 92e2545 (fix: rebase)
+>>>>>>> 9fe1977 (fix: rebase)
 
 const app = express();
 const port = 4001;
 
 app.use(express.json());
 app.use("/register", registerRouter);
+<<<<<<< HEAD
 app.use("/profile", profileRouter);
+<<<<<<< HEAD
 app.use("/login", loginRouter);
 app.use(cors());
 
+=======
+=======
+app.use("/login", loginRouter);
+>>>>>>> 92e2545 (fix: rebase)
+>>>>>>> 9fe1977 (fix: rebase)
 
 app.get("/test", (req, res) => {
   return res.json("Server API is working 🚀");
