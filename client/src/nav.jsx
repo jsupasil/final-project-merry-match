@@ -7,8 +7,11 @@ import hamburger from "./assets/images/hamburger.png";
 function Nav() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="navbar bg-white md:pl-[100px] md:pr-[100px] ">
 =======
+=======
+>>>>>>> eaa916a (feat: add api login)
 <<<<<<< HEAD
     <div className="navbar bg-white md:pl-[120px] md:pr-[120px] ">
 >>>>>>> 9fe1977 (fix: rebase)
@@ -61,6 +64,8 @@ function Nav() {
             </ul>
           </div>
 =======
+=======
+>>>>>>> 5bcc2f3 (feat: add api login)
     <div className="navbar bg-white md:pl-[100px] md:pr-[100px] ">
     <div className="flex-1 px--18 lg:flex-none lg:[calc(100%-320px)]">
       <a ><img src={logo} alt="logo" className='w-[132px]:h-[38px] md:w-[180px] md:h-[]'/></a>

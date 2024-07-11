@@ -1,17 +1,26 @@
 import { application, Router } from "express";
 import connectionPool from "../utils/db.mjs";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import bcrypt from "bcrypt"
 import cors from 'cors'
 import supabase from "../apps/lib/supabase.js";
 import express from 'express'
 =======
+=======
+>>>>>>> eaa916a (feat: add api login)
 <<<<<<< HEAD
 import { v4 as uuidv4 } from "uuid"; // นำเข้า uuid
 =======
 import bcrypt from "bcrypt"
 >>>>>>> 92e2545 (fix: rebase)
+<<<<<<< HEAD
 >>>>>>> 9fe1977 (fix: rebase)
+=======
+=======
+import bcrypt from "bcrypt"
+>>>>>>> 5bcc2f3 (feat: add api login)
+>>>>>>> eaa916a (feat: add api login)
 
 const app = express()
 const registerRouter = Router();
@@ -27,10 +36,13 @@ app.use(express.json());
 
 registerRouter.post("/", async (req, res) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const inputData = { ...req.body };
 
   try {
 =======
+=======
+>>>>>>> eaa916a (feat: add api login)
 <<<<<<< HEAD
   const {
     user_id,
@@ -62,7 +74,15 @@ registerRouter.post("/", async (req, res) => {
   const inputData = { ...req.body };
 
   try {
+<<<<<<< HEAD
 >>>>>>> 9fe1977 (fix: rebase)
+=======
+=======
+  const inputData = { ...req.body };
+
+  try {
+>>>>>>> 5bcc2f3 (feat: add api login)
+>>>>>>> eaa916a (feat: add api login)
     const hashPassword = await bcrypt.hash(inputData.password,10)
     // if (!inputData.name || !inputData.email || !inputData.password) {
     //   return res.status(400).json({
@@ -74,6 +94,7 @@ registerRouter.post("/", async (req, res) => {
       [inputData.username, inputData.email, hashPassword]
     );
     const userId = result.rows[0].user_id;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     await connectionPool.query(
@@ -96,6 +117,8 @@ registerRouter.post("/", async (req, res) => {
     );
  
 =======
+=======
+>>>>>>> eaa916a (feat: add api login)
 >>>>>>> 92e2545 (fix: rebase)
 
     await connectionPool.query(
@@ -126,6 +149,10 @@ registerRouter.post("/", async (req, res) => {
       message: "Register successfully",
     });
 =======
+=======
+
+    await connectionPool.query(
+>>>>>>> 5bcc2f3 (feat: add api login)
       `INSERT INTO user_profiles (user_id,name, birthdate, location, city, username, email, password, sexident, sexprefer, racialprefer, meetprefer, image) 
       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9,$10,$11,$12,$13)  `,
       [  userId,
@@ -144,8 +171,14 @@ registerRouter.post("/", async (req, res) => {
       ]
     );
  
+<<<<<<< HEAD
 >>>>>>> 92e2545 (fix: rebase)
+<<<<<<< HEAD
 >>>>>>> 9fe1977 (fix: rebase)
+=======
+=======
+>>>>>>> 5bcc2f3 (feat: add api login)
+>>>>>>> eaa916a (feat: add api login)
   } catch (error) {
     console.error("Database error:", error);
     return res.status(500).json({ message: "Failed to create user profile." });
@@ -157,6 +190,7 @@ registerRouter.post("/", async (req, res) => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default registerRouter;
 =======
 <<<<<<< HEAD
@@ -164,4 +198,10 @@ export default registerRouter;
 =======
 export default registerRouter;
 >>>>>>> 92e2545 (fix: rebase)
+<<<<<<< HEAD
 >>>>>>> 9fe1977 (fix: rebase)
+=======
+=======
+export default registerRouter;
+>>>>>>> 5bcc2f3 (feat: add api login)
+>>>>>>> eaa916a (feat: add api login)
