@@ -4,10 +4,10 @@ import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import MatchingPage from "./components/MatchingPage";
-import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import PackageListPage from "./component/packagelist";
 import AddPackagePage from "./component/addpackage";
 import EditPackage from "./component/editpackage";
+import LandingPage from "./components/LandingPage";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Route path="/package/add" element={<AddPackagePage />} />
           <Route path="/package/view" element={<PackageListPage />} />
           <Route path="/package/edit" element={<EditPackage />} />
+          <Route path="/landing" element={<LandingPage />} />
 
           {/* <Route path="/page" element={<Page />} /> */}
         </Routes>
@@ -26,4 +27,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
