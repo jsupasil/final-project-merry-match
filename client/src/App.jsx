@@ -166,7 +166,11 @@ function App() {
 >>>>>>> 0cfe0c7 (feat, style: partial complete register css page)
 =======
           <Route path="/login" element={<Login />} />
+<<<<<<< HEAD
 >>>>>>> ba3926b (style: finish style register page)
+=======
+          <Route path="/user/:userId/matching" element={<MatchingPage />} />
+>>>>>>> c8c61ab (feat: link matching page)
 
           {/* <Route path="/page" element={<Page />} /> */}
         </Routes>
