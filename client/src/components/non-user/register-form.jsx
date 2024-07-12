@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import * as countryDB from "../../assets/test-data/Countrydata.json";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import useRegister from "../hooks/hooks";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -14,6 +15,8 @@ import reject_icon from "../../assets/icons/reject-icon.png";
 import love_icon from "../../assets/icons/love-icon.png";
 import preview_exit_icon from "../../assets/icons/preview-exit-icon.png";
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+>>>>>>> 1c984dc (style: finish style register page)
 
 function RegisterForm() {
   const [hobbiesList, setHobbiesList] = useState([]);
@@ -41,6 +44,9 @@ function RegisterForm() {
   const [images, setImages] = useState(["", "", "", "", ""]);
   const [step, setStep] = useState(1);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c984dc (style: finish style register page)
   const [userInfo, setUserInfo] = useState({
     name: "",
     dateOfBirth: "",
@@ -55,6 +61,7 @@ function RegisterForm() {
     racePrefer: "",
     meeting: "",
     hobbiesList: [],
+<<<<<<< HEAD
     images: ["", "", "", "", ""],
   });
   // const { createId, isError, isLoading } = useRegister();
@@ -69,6 +76,12 @@ function RegisterForm() {
 
   console.log(images);
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+    images: { 1: "", 2: "", 3: "", 4: "", 5: "" },
+  });
+
+  console.log(userInfo);
+>>>>>>> 1c984dc (style: finish style register page)
   useEffect(() => {
     setCityList(
       countryDB.data
@@ -78,10 +91,14 @@ function RegisterForm() {
   }, [location]);
   const inputClassName =
 <<<<<<< HEAD
+<<<<<<< HEAD
     "h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 text-gray-900 bg-white placeholder:text-gray-600";
 =======
     "h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 text-gray-900 bg-white";
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+    "h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 text-gray-900 bg-white placeholder:text-gray-600";
+>>>>>>> 1c984dc (style: finish style register page)
   const formGroupClassName = "flex flex-col gap-1 w-full";
   const formGroupRowClassName =
     "flex flex-col-reverse gap-6 lg:flex-row-reverse lg:gap-6";
@@ -98,8 +115,12 @@ function RegisterForm() {
     <>
       <form className="">
         <section className="gap-10 lg:gap-20 flex flex-col px-4 py-10 lg:px-60 lg:pt-20 lg:pb-[60px] min-h-[calc(100vh-164px)] lg:min-h-[calc(100vh-200px)]">
+<<<<<<< HEAD
           <section className=" flex justify-between">
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+          <section className=" flex flex-col max-lg:gap-[37px] lg:flex-row lg:justify-between">
+>>>>>>> 1c984dc (style: finish style register page)
             <article>
               <h1 className=" text-sm font-semibold leading-[21px] text-beige-700 mb-2">
                 REGISTER
@@ -112,6 +133,9 @@ function RegisterForm() {
               </p>
             </article>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c984dc (style: finish style register page)
             <div className="flex lg:justify-end lg:items-end">
               <div className=" flex gap-2 lg:gap-4 item-center">
                 <button
@@ -199,6 +223,7 @@ function RegisterForm() {
                   ) : null}
                 </button>
               </div>
+<<<<<<< HEAD
 =======
             <div className=" hidden lg:flex justify-end items-end gap-4">
               <button
@@ -235,16 +260,22 @@ function RegisterForm() {
                 3
               </button>
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+>>>>>>> 1c984dc (style: finish style register page)
             </div>
           </section>
 
           {step === 1 ? (
             <section>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h2 className="mb-6 font-bold text-2xl leading-[30px] text-purple-500">
 =======
               <h2 className="mb-6 font-bold text-2xl leading-[30px] text-gray-900">
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+              <h2 className="mb-6 font-bold text-2xl leading-[30px] text-purple-500">
+>>>>>>> 1c984dc (style: finish style register page)
                 Basic Information
               </h2>
               <div className="flex flex-col gap-6 leading-6 lg:gap-10 ">
@@ -253,6 +284,7 @@ function RegisterForm() {
                     <label htmlFor="dateOfBirth">Date of birth</label>
                     <input
                       id="dateOfBirth"
+<<<<<<< HEAD
 <<<<<<< HEAD
                       className="h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 bg-white text-gray-900 placeholder:text-gray-600"
                       type="date"
@@ -267,6 +299,17 @@ function RegisterForm() {
                       className="h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 bg-white text-gray-900"
                       type="date"
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+                      className="h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 bg-white text-gray-900 placeholder:text-gray-600"
+                      type="date"
+                      value={userInfo.dateOfBirth}
+                      onChange={(event) =>
+                        setUserInfo({
+                          ...userInfo,
+                          dateOfBirth: event.target.value,
+                        })
+                      }
+>>>>>>> 1c984dc (style: finish style register page)
                       required
                     />
                   </div>
@@ -279,12 +322,18 @@ function RegisterForm() {
                       type="text"
                       maxLength="50"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c984dc (style: finish style register page)
                       value={userInfo.name}
                       onChange={(event) =>
                         setUserInfo({ ...userInfo, name: event.target.value })
                       }
+<<<<<<< HEAD
 =======
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+>>>>>>> 1c984dc (style: finish style register page)
                       required
                     />
                   </div>
@@ -294,18 +343,28 @@ function RegisterForm() {
                   <div className={formGroupClassName}>
                     <label htmlFor="city">City</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c984dc (style: finish style register page)
                     <select
                       id="city"
                       className={inputClassName}
                       value={userInfo.city}
+<<<<<<< HEAD
+=======
+                      defaultValue={"select one"}
+>>>>>>> 1c984dc (style: finish style register page)
                       onChange={(event) =>
                         setUserInfo({ ...userInfo, city: event.target.value })
                       }
                     >
+<<<<<<< HEAD
 =======
                     <select id="city" className={inputClassName}>
                       <option selected>select one</option>
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+>>>>>>> 1c984dc (style: finish style register page)
                       {cityList.map((item, index) => (
                         <option key={index}>{item}</option>
                       ))}
@@ -318,6 +377,7 @@ function RegisterForm() {
                       id="location"
                       className={inputClassName}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       value={userInfo.location}
                       onChange={(event) => {
                         setLocation(event.target.value);
@@ -328,12 +388,22 @@ function RegisterForm() {
                       }}
                     >
 =======
+=======
+                      value={userInfo.location}
+>>>>>>> 1c984dc (style: finish style register page)
                       onChange={(event) => {
                         setLocation(event.target.value);
+                        setUserInfo({
+                          ...userInfo,
+                          location: event.target.value,
+                        });
                       }}
                     >
+<<<<<<< HEAD
                       <option selected>select one</option>
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+>>>>>>> 1c984dc (style: finish style register page)
                       {locationDB.map((item, index) => (
                         <option key={index}>{item}</option>
                       ))}
@@ -343,6 +413,7 @@ function RegisterForm() {
 
                 <div className={formGroupRowClassName}>
                   <div className={formGroupClassName}>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <label htmlFor="email">Email</label>
                     <input
@@ -358,14 +429,19 @@ function RegisterForm() {
                     <label htmlFor="email" className="text-gray-600">
                       Email
                     </label>
+=======
+                    <label htmlFor="email">Email</label>
+>>>>>>> 1c984dc (style: finish style register page)
                     <input
                       id="email"
-                      className={
-                        "h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 text-gray-900 bg-gray-200"
-                      }
+                      className={inputClassName}
                       type="email"
+<<<<<<< HEAD
                       disabled
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+                      placeholder="name@website.com"
+>>>>>>> 1c984dc (style: finish style register page)
                     />
                   </div>
 
@@ -387,7 +463,11 @@ function RegisterForm() {
                       }
 =======
                       maxLength="6"
+<<<<<<< HEAD
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+                      placeholder="At least 6 characters"
+>>>>>>> 1c984dc (style: finish style register page)
                       required
                     />
                   </div>
@@ -412,7 +492,11 @@ function RegisterForm() {
                       }
 =======
                       maxLength="8"
+<<<<<<< HEAD
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+                      placeholder="At least 8 characters"
+>>>>>>> 1c984dc (style: finish style register page)
                       required
                     />
                   </div>
@@ -421,6 +505,7 @@ function RegisterForm() {
                     <input
                       id="password"
                       className={inputClassName}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       value={userInfo.password}
                       onChange={(event) =>
@@ -436,6 +521,12 @@ function RegisterForm() {
                       type="password"
                       maxLength="8"
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+                      value={userInfo.password}
+                      type="password"
+                      maxLength="8"
+                      placeholder="At least 8 characters"
+>>>>>>> 1c984dc (style: finish style register page)
                       required
                     />
                   </div>
@@ -445,10 +536,14 @@ function RegisterForm() {
           ) : step === 2 ? (
             <section>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h2 className="mb-6 font-bold text-2xl leading-[30px] text-purple-500">
 =======
               <h2 className="mb-6 font-bold text-2xl leading-[30px] text-gray-900">
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+              <h2 className="mb-6 font-bold text-2xl leading-[30px] text-purple-500">
+>>>>>>> 1c984dc (style: finish style register page)
                 Identities and Interests
               </h2>
               <div className={formClassName}>
@@ -673,6 +768,9 @@ function RegisterForm() {
           )}
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c984dc (style: finish style register page)
         <footer className=" h-28 bg-white px-4 lg:px-40 py-8 flex justify-between items-center border-t-2 border-gray-300">
           <p className=" w-6 lg:w-[72px] h-12 text-gray-700 px-0 lg:px-6 py-3">
             {step}
@@ -690,6 +788,7 @@ function RegisterForm() {
             >
               &larr; back
             </button>
+<<<<<<< HEAD
             <Link to={"/login"}>
               <button
                 className=" h-12 px-6 py-3 bg-red-500 drop-shadow-primary text-white rounded-[99px]"
@@ -708,6 +807,21 @@ function RegisterForm() {
 =======
         <footer className=" h-28 bg-red-utility"></footer>
 >>>>>>> be63780 (feat, style: partial complete register css page)
+=======
+            <button
+              className=" h-12 px-6 py-3 bg-red-500 drop-shadow-primary text-white rounded-[99px]"
+              type={step === 3 ? "submit" : "button"}
+              onClick={(event) => {
+                step === 3
+                  ? setStep(3)
+                  : (event.preventDefault(), setStep(step + 1));
+              }}
+            >
+              {step === 3 ? "Confirm" : "Next Step"}
+            </button>
+          </div>
+        </footer>
+>>>>>>> 1c984dc (style: finish style register page)
       </form>
     </>
   );

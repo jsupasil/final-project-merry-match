@@ -162,7 +162,11 @@ function App() {
 <<<<<<< HEAD
 =======
           <Route path="/register" element={<RegisterPage />} />
+<<<<<<< HEAD
 >>>>>>> 0cfe0c7 (feat, style: partial complete register css page)
+=======
+          <Route path="/login" element={<Login />} />
+>>>>>>> ba3926b (style: finish style register page)
 
           {/* <Route path="/page" element={<Page />} /> */}
         </Routes>
