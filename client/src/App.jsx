@@ -24,6 +24,7 @@ function App() {
           <Route path="/user/:userId/edit" element={<EditProfilePage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/landing" element={<LandingPage />} />
 
           {/* <Route path="/page" element={<Page />} /> */}
         </Routes>
@@ -31,4 +32,5 @@ function App() {
     </>
   );
 }
+
 export default App;
