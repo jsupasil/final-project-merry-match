@@ -1,13 +1,14 @@
 import "./App.css";
 import Nav from "./nav";
-import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
-import Footer from "./components/Footer";
-import Login from "./components/Login";
-import MatchingPage from "./components/MatchingPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { Param } from "react-router-dom";
+// import Footer from "./components/Footer";
+// import Login from "./components/Login";
+// import MatchingPage from "./components/MatchingPage";
 import PackageListPage from "./component/packagelist";
 import AddPackagePage from "./component/addpackage";
 import EditPackage from "./component/editpackage";
-import LandingPage from "./components/LandingPage";
+import LandingPage from "./components/landing-page";
 
 function App() {
   return (
@@ -26,5 +27,15 @@ function App() {
     </>
   );
 }
+
+// import "./App.css";
+// import { useAuth } from "./contexts/authentication";
+// import AuthenticatedApp from "./pages/AuthenticatedApp";
+// import UnauthenticatedApp from "./pages/UnauthenticatedApp";
+
+// function App() {
+//   const auth = useAuth();
+//   return auth.isAuthenticated ? <AuthenticatedApp /> : <UnauthenticatedApp />;
+// }
 
 export default App;

@@ -3,7 +3,7 @@ import connectionPool from "./src/utils/db.mjs";
 import registerRouter from "../server/src/routes/register.mjs";
 import loginRouter from "../server/src/routes/login.mjs";
 import profileRouter from "../server/src/routes/profile.mjs";
-import loginRouter from "./src/routes/login.mjs";
+import authRouter from "./src/apps/auth.js";
 
 const app = express();
 const port = 4001;
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
 app.use("/profile", profileRouter);
-app.use("/login", loginRouter);
+app.use("/auth", authRouter);
 
 app.get("/test", (req, res) => {
   return res.json("Server API is working 🚀");

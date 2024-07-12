@@ -1,6 +1,6 @@
 import { Router } from "express";
 import connectionPool from "../utils/db.mjs";
-import bcrypt from "bcrypt"
+import bcrypt from "bcrypt";
 
 const registerRouter = Router();
 
@@ -8,7 +8,7 @@ registerRouter.post("/", async (req, res) => {
   const inputData = { ...req.body };
 
   try {
-    const hashPassword = await bcrypt.hash(inputData.password,10)
+    const hashPassword = await bcrypt.hash(inputData.password, 10);
     // if (!inputData.name || !inputData.email || !inputData.password) {
     //   return res.status(400).json({
     //     code: "U002",
@@ -23,7 +23,8 @@ registerRouter.post("/", async (req, res) => {
     await connectionPool.query(
       `INSERT INTO user_profiles (user_id,name, birthdate, location, city, username, email, password, sexident, sexprefer, racialprefer, meetprefer, image) 
       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9,$10,$11,$12,$13)  `,
-      [  userId,
+      [
+        userId,
         inputData.name,
         inputData.birthdate,
         inputData.location,
@@ -38,7 +39,6 @@ registerRouter.post("/", async (req, res) => {
         inputData.image,
       ]
     );
- 
   } catch (error) {
     console.error("Database error:", error);
     return res.status(500).json({ message: "Failed to create user profile." });
