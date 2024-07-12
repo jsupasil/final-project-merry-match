@@ -47,6 +47,7 @@ import EditProfilePage from "./pages/user-profile-management/edit-profile-page.j
 <<<<<<< HEAD
 <<<<<<< HEAD
 import RegisterPage from "./pages/non-user/register-page.jsx";
+<<<<<<< HEAD
 import NavUser from "./pages/user-profile-management/navUser.jsx";
 import HomeUserLogin from "./pages/user-profile-management/home-login.jsx";
 =======
@@ -151,6 +152,9 @@ import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 =======
 import RegisterPage from "./pages/non-user/register-page.jsx";
 >>>>>>> 0cfe0c7 (feat, style: partial complete register css page)
+=======
+import MerryListPage from "./pages/user-profile-management/merry-list-page.jsx";
+>>>>>>> 4bbcf32 (feat: create file for merry-list page)
 
 function App() {
   return (
@@ -170,7 +174,11 @@ function App() {
 >>>>>>> ba3926b (style: finish style register page)
 =======
           <Route path="/user/:userId/matching" element={<MatchingPage />} />
+<<<<<<< HEAD
 >>>>>>> c8c61ab (feat: link matching page)
+=======
+          <Route path="/user/:userId/merry-list" element={<MerryListPage />} />
+>>>>>>> 4bbcf32 (feat: create file for merry-list page)
 
           {/* <Route path="/page" element={<Page />} /> */}
         </Routes>
