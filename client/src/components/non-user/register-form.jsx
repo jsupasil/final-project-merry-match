@@ -1,9 +1,19 @@
 import { useEffect, useState } from "react";
 import * as countryDB from "../../assets/test-data/Countrydata.json";
+<<<<<<< HEAD
 import useRegister from "../hooks/hooks";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+=======
+import exit_icon from "../../assets/icons/cancel-icon.png";
+import back_icon from "../../assets/icons/back-vector-icon.png";
+import next_icon from "../../assets/icons/next-vector-icon.png";
+import location_icon from "../../assets/icons/location-icon.png";
+import reject_icon from "../../assets/icons/reject-icon.png";
+import love_icon from "../../assets/icons/love-icon.png";
+import preview_exit_icon from "../../assets/icons/preview-exit-icon.png";
+>>>>>>> be63780 (feat, style: partial complete register css page)
 
 function RegisterForm() {
   const [hobbiesList, setHobbiesList] = useState([]);
@@ -20,12 +30,17 @@ function RegisterForm() {
     "long term fish and chip",
     "friend with buffet",
     "one night swensen",
+<<<<<<< HEAD
     "only friends",
+=======
+    "only fries",
+>>>>>>> be63780 (feat, style: partial complete register css page)
     "24-7 eleven",
     "keep donut",
   ];
   const [images, setImages] = useState(["", "", "", "", ""]);
   const [step, setStep] = useState(1);
+<<<<<<< HEAD
   const [userInfo, setUserInfo] = useState({
     name: "",
     dateOfBirth: "",
@@ -50,6 +65,10 @@ function RegisterForm() {
   };
 
   console.log(userInfo);
+=======
+
+  console.log(images);
+>>>>>>> be63780 (feat, style: partial complete register css page)
   useEffect(() => {
     setCityList(
       countryDB.data
@@ -58,17 +77,29 @@ function RegisterForm() {
     );
   }, [location]);
   const inputClassName =
+<<<<<<< HEAD
     "h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 text-gray-900 bg-white placeholder:text-gray-600";
+=======
+    "h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 text-gray-900 bg-white";
+>>>>>>> be63780 (feat, style: partial complete register css page)
   const formGroupClassName = "flex flex-col gap-1 w-full";
   const formGroupRowClassName =
     "flex flex-col-reverse gap-6 lg:flex-row-reverse lg:gap-6";
   const formClassName = "flex flex-col gap-6 leading-6 lg:gap-10 ";
+<<<<<<< HEAD
 
   return (
     <>
       <form className="" onSubmit={handleSubmit}>
         <section className="gap-10 lg:gap-20 flex flex-col px-4 py-10 lg:px-60 lg:pt-20 lg:pb-[60px] min-h-[calc(100vh-164px)] lg:min-h-[calc(100vh-200px)]">
           <section className=" flex flex-col max-lg:gap-[37px] lg:flex-row lg:justify-between">
+=======
+  return (
+    <>
+      <form className="">
+        <section className="gap-10 lg:gap-20 flex flex-col px-4 py-10 lg:px-60 lg:pt-20 lg:pb-[60px] min-h-[calc(100vh-164px)] lg:min-h-[calc(100vh-200px)]">
+          <section className=" flex justify-between">
+>>>>>>> be63780 (feat, style: partial complete register css page)
             <article>
               <h1 className=" text-sm font-semibold leading-[21px] text-beige-700 mb-2">
                 REGISTER
@@ -80,6 +111,7 @@ function RegisterForm() {
                 matching
               </p>
             </article>
+<<<<<<< HEAD
             <div className="flex lg:justify-end lg:items-end">
               <div className=" flex gap-2 lg:gap-4 item-center">
                 <button
@@ -167,12 +199,52 @@ function RegisterForm() {
                   ) : null}
                 </button>
               </div>
+=======
+            <div className=" hidden lg:flex justify-end items-end gap-4">
+              <button
+                type="button"
+                id="preview-btn"
+                className=" px-6 py-3 bg-red-100 text-red-600 font-bold leading-6 text-center rounded-[99px] drop-shadow-secondary"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setStep(1);
+                }}
+              >
+                1
+              </button>
+              <button
+                type="button"
+                id="preview-btn"
+                className=" px-6 py-3 bg-red-100 text-red-600 font-bold leading-6 text-center rounded-[99px] drop-shadow-secondary"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setStep(2);
+                }}
+              >
+                2
+              </button>
+              <button
+                type="button"
+                id="preview-btn"
+                className=" px-6 py-3 bg-red-100 text-red-600 font-bold leading-6 text-center rounded-[99px] drop-shadow-secondary"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setStep(3);
+                }}
+              >
+                3
+              </button>
+>>>>>>> be63780 (feat, style: partial complete register css page)
             </div>
           </section>
 
           {step === 1 ? (
             <section>
+<<<<<<< HEAD
               <h2 className="mb-6 font-bold text-2xl leading-[30px] text-purple-500">
+=======
+              <h2 className="mb-6 font-bold text-2xl leading-[30px] text-gray-900">
+>>>>>>> be63780 (feat, style: partial complete register css page)
                 Basic Information
               </h2>
               <div className="flex flex-col gap-6 leading-6 lg:gap-10 ">
@@ -181,6 +253,7 @@ function RegisterForm() {
                     <label htmlFor="dateOfBirth">Date of birth</label>
                     <input
                       id="dateOfBirth"
+<<<<<<< HEAD
                       className="h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 bg-white text-gray-900 placeholder:text-gray-600"
                       type="date"
                       value={userInfo.dateOfBirth}
@@ -190,6 +263,10 @@ function RegisterForm() {
                           dateOfBirth: event.target.value,
                         })
                       }
+=======
+                      className="h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 bg-white text-gray-900"
+                      type="date"
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       required
                     />
                   </div>
@@ -201,10 +278,13 @@ function RegisterForm() {
                       className={inputClassName}
                       type="text"
                       maxLength="50"
+<<<<<<< HEAD
                       value={userInfo.name}
                       onChange={(event) =>
                         setUserInfo({ ...userInfo, name: event.target.value })
                       }
+=======
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       required
                     />
                   </div>
@@ -213,6 +293,7 @@ function RegisterForm() {
                 <div className={formGroupRowClassName}>
                   <div className={formGroupClassName}>
                     <label htmlFor="city">City</label>
+<<<<<<< HEAD
                     <select
                       id="city"
                       className={inputClassName}
@@ -221,6 +302,10 @@ function RegisterForm() {
                         setUserInfo({ ...userInfo, city: event.target.value })
                       }
                     >
+=======
+                    <select id="city" className={inputClassName}>
+                      <option selected>select one</option>
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       {cityList.map((item, index) => (
                         <option key={index}>{item}</option>
                       ))}
@@ -232,6 +317,7 @@ function RegisterForm() {
                     <select
                       id="location"
                       className={inputClassName}
+<<<<<<< HEAD
                       value={userInfo.location}
                       onChange={(event) => {
                         setLocation(event.target.value);
@@ -241,6 +327,13 @@ function RegisterForm() {
                         });
                       }}
                     >
+=======
+                      onChange={(event) => {
+                        setLocation(event.target.value);
+                      }}
+                    >
+                      <option selected>select one</option>
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       {locationDB.map((item, index) => (
                         <option key={index}>{item}</option>
                       ))}
@@ -250,6 +343,7 @@ function RegisterForm() {
 
                 <div className={formGroupRowClassName}>
                   <div className={formGroupClassName}>
+<<<<<<< HEAD
                     <label htmlFor="email">Email</label>
                     <input
                       id="email"
@@ -260,6 +354,18 @@ function RegisterForm() {
                       onChange={(event) =>
                         setUserInfo({ ...userInfo, email: event.target.value })
                       }
+=======
+                    <label htmlFor="email" className="text-gray-600">
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      className={
+                        "h-12 p-3 pr-4 gap-2 rounded-lg border border-gray-400 text-gray-900 bg-gray-200"
+                      }
+                      type="email"
+                      disabled
+>>>>>>> be63780 (feat, style: partial complete register css page)
                     />
                   </div>
 
@@ -269,6 +375,7 @@ function RegisterForm() {
                       id="username"
                       className={inputClassName}
                       type="text"
+<<<<<<< HEAD
                       minLength="6"
                       placeholder="At least 6 characters"
                       value={userInfo.username}
@@ -278,6 +385,9 @@ function RegisterForm() {
                           username: event.target.value,
                         })
                       }
+=======
+                      maxLength="6"
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       required
                     />
                   </div>
@@ -290,6 +400,7 @@ function RegisterForm() {
                       id="confirmed-password"
                       className={inputClassName}
                       type="password"
+<<<<<<< HEAD
                       minLength="8"
                       placeholder="At least 8 characters"
                       value={userInfo.confirmPassword}
@@ -299,6 +410,9 @@ function RegisterForm() {
                           confirmPassword: event.target.value,
                         })
                       }
+=======
+                      maxLength="8"
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       required
                     />
                   </div>
@@ -307,6 +421,7 @@ function RegisterForm() {
                     <input
                       id="password"
                       className={inputClassName}
+<<<<<<< HEAD
                       value={userInfo.password}
                       onChange={(event) =>
                         setUserInfo({
@@ -317,6 +432,10 @@ function RegisterForm() {
                       type="password"
                       minLength="8"
                       placeholder="At least 8 characters"
+=======
+                      type="password"
+                      maxLength="8"
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       required
                     />
                   </div>
@@ -325,13 +444,18 @@ function RegisterForm() {
             </section>
           ) : step === 2 ? (
             <section>
+<<<<<<< HEAD
               <h2 className="mb-6 font-bold text-2xl leading-[30px] text-purple-500">
+=======
+              <h2 className="mb-6 font-bold text-2xl leading-[30px] text-gray-900">
+>>>>>>> be63780 (feat, style: partial complete register css page)
                 Identities and Interests
               </h2>
               <div className={formClassName}>
                 <div className={formGroupRowClassName}>
                   <div className={formGroupClassName}>
                     <label htmlFor="sexPrefer">Sexual preferences:</label>
+<<<<<<< HEAD
                     <select
                       id="sexPrefer"
                       value={userInfo.sexPrefer}
@@ -343,6 +467,10 @@ function RegisterForm() {
                       }
                       className={inputClassName}
                     >
+=======
+                    <select id="sexPrefer" className={inputClassName}>
+                      <option selected>select one</option>
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       {sexDB.map((item, index) => (
                         <option key={index}>{item}</option>
                       ))}
@@ -351,6 +479,7 @@ function RegisterForm() {
 
                   <div className={formGroupClassName}>
                     <label htmlFor="sexIden">Sexual identities:</label>
+<<<<<<< HEAD
                     <select
                       id="sexIden"
                       value={userInfo.sexIden}
@@ -362,6 +491,10 @@ function RegisterForm() {
                       }
                       className={inputClassName}
                     >
+=======
+                    <select id="sexIden" className={inputClassName}>
+                      <option selected>select one</option>
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       {sexDB.map((item, index) => (
                         <option key={index}>{item}</option>
                       ))}
@@ -372,6 +505,7 @@ function RegisterForm() {
                 <div className={formGroupRowClassName}>
                   <div className={formGroupClassName}>
                     <label htmlFor="meeting">Meeting interest:</label>
+<<<<<<< HEAD
                     <select
                       id="meeting"
                       value={userInfo.meeting}
@@ -383,6 +517,10 @@ function RegisterForm() {
                       }
                       className={inputClassName}
                     >
+=======
+                    <select id="meeting" className={inputClassName}>
+                      <option selected>select one</option>
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       {meetingDB.map((item, index) => (
                         <option key={index}>{item}</option>
                       ))}
@@ -391,6 +529,7 @@ function RegisterForm() {
 
                   <div className={formGroupClassName}>
                     <label htmlFor="racePrefer">Racial preferences:</label>
+<<<<<<< HEAD
                     <select
                       id="racePrefer"
                       value={userInfo.racePrefer}
@@ -402,6 +541,10 @@ function RegisterForm() {
                       }
                       className={inputClassName}
                     >
+=======
+                    <select id="racePrefer" className={inputClassName}>
+                      <option selected>select one</option>
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       {raceDB.map((item, index) => (
                         <option key={index}>{item}</option>
                       ))}
@@ -440,17 +583,24 @@ function RegisterForm() {
                       type="text"
                       value={hobby}
                       className="grow px-2 bg-white"
+<<<<<<< HEAD
                       onChange={(event) => {
                         setHobby(event.target.value);
                       }}
+=======
+                      onChange={(event) => setHobby(event.target.value)}
+>>>>>>> be63780 (feat, style: partial complete register css page)
                       onKeyDown={(event) => {
                         if (event.key === "Enter") {
                           event.preventDefault();
                           setHobbiesList([...hobbiesList, hobby]);
+<<<<<<< HEAD
                           setUserInfo({
                             ...userInfo,
                             hobbiesList: hobbiesList,
                           });
+=======
+>>>>>>> be63780 (feat, style: partial complete register css page)
                           setHobby("");
                         }
                       }}
@@ -522,6 +672,7 @@ function RegisterForm() {
             </section>
           )}
         </section>
+<<<<<<< HEAD
         <footer className=" h-28 bg-white px-4 lg:px-40 py-8 flex justify-between items-center border-t-2 border-gray-300">
           <p className=" w-6 lg:w-[72px] h-12 text-gray-700 px-0 lg:px-6 py-3">
             {step}
@@ -554,6 +705,9 @@ function RegisterForm() {
             </Link>
           </div>
         </footer>
+=======
+        <footer className=" h-28 bg-red-utility"></footer>
+>>>>>>> be63780 (feat, style: partial complete register css page)
       </form>
     </>
   );

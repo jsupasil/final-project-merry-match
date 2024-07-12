@@ -45,6 +45,7 @@ import AddPackagePage from "./component/addpackage";
 import EditPackage from "./component/editpackage";
 import EditProfilePage from "./pages/user-profile-management/edit-profile-page.jsx";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import RegisterPage from "./pages/non-user/register-page.jsx";
 import NavUser from "./pages/user-profile-management/navUser.jsx";
 import HomeUserLogin from "./pages/user-profile-management/home-login.jsx";
@@ -147,6 +148,9 @@ function App() {
 =======
 import EditProfilePage from "./pages/user-profile-management/edit-profile-page.jsx";
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
+=======
+import RegisterPage from "./pages/non-user/register-page.jsx";
+>>>>>>> 0cfe0c7 (feat, style: partial complete register css page)
 
 function App() {
   return (
@@ -155,6 +159,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Nav />} />
           <Route path="/user/:userId/edit" element={<EditProfilePage />} />
+<<<<<<< HEAD
+=======
+          <Route path="/register" element={<RegisterPage />} />
+>>>>>>> 0cfe0c7 (feat, style: partial complete register css page)
 
           {/* <Route path="/page" element={<Page />} /> */}
         </Routes>
