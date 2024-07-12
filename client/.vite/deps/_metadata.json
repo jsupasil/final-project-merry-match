@@ -1,0 +1,40 @@
+{
+  "hash": "1cf1052a",
+  "configHash": "9e262bc1",
+  "lockfileHash": "490e96c1",
+  "browserHash": "2627488c",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "b4f8ebbe",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "f41fa690",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "6776a07f",
+      "needsInterop": false
+    },
+    "react-tinder-card": {
+      "src": "../../node_modules/react-tinder-card/index.js",
+      "file": "react-tinder-card.js",
+      "fileHash": "7c41fdbe",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-QPG7G3M7": {
+      "file": "chunk-QPG7G3M7.js"
+    },
+    "chunk-UTEJFLXC": {
+      "file": "chunk-UTEJFLXC.js"
+    }
+  }
+}
