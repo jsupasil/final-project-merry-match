@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import ImgUser1 from "../assets/images/mockupimguser1.png";
 import LikeButton from "../assets/images/likebutton.png";
 import DislikeButton from "../assets/images/dislikebutton.png";
@@ -10,11 +10,11 @@ import Avatar from "../assets/images/avatarmatchingpage.png";
 import TinderCard from "react-tinder-card";
 
 const MatchingPage = () => {
-  const [isHidden, setIsHidden] = useState(true);
+  // const [isHidden, setIsHidden] = useState(true);
 
-  const toggleDiv = () => {
-    setIsHidden(!isHidden);
-  };
+  // const toggleDiv = () => {
+  //   setIsHidden(!isHidden);
+  // };
 
   const onSwipe = (direction) => {
     console.log("You swiped: " + direction);

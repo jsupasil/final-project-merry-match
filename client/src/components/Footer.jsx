@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import IconFacebook from "../assets/images/iconfb.png";
 import IconIg from "../assets/images/iconig.png";
 import IconTwit from "../assets/images/icontw.png";

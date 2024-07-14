@@ -1,47 +1,95 @@
 import { Router } from "express";
 import connectionPool from "../utils/db.mjs";
-import bcrypt from "bcrypt"
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 const loginRouter = Router();
 
 loginRouter.post("/", async (req, res) => {
-    const { usernameOrEmail, password } = req.body;
-
-    if (!usernameOrEmail || !password) {
-        return res.status(400).json({
-          code: "U002",
-          message: "Email or Username and Password is null"
-        });
-      }
-  
-      try{
-        const [result] = await connectionPool.query("SELECT * FROM user_profiles WHERE email = $1 OR username = $2", [usernameOrEmail, usernameOrEmail]);
-    const user = result[0];
-
+  const { usernameOrEmail, password } = req.body;
+  if (!usernameOrEmail?.trim() || !password?.trim()) {
+    return res.status(400).json({
+      code: "U002",
+      message: "Email or Username and Password is null",
+    });
+  }
+  try {
+    const result = await connectionPool.query(
+      `SELECT * FROM user_profiles WHERE email = $1 OR username = $2 `,
+      [usernameOrEmail, usernameOrEmail]
+    );
+    const user = result.rows[0];
     if (!user) {
       return res.status(404).json({
         code: "U001",
-        message: "Email or Username and Password is incorrect"
+        message: "Email or Username and Password is incorrect",
       });
     }
-
     const match = await bcrypt.compare(password, user.password);
     if (!match) {
       return res.status(404).json({
         code: "U001",
-        message: "Email or Username and Password is incorrect"
+        message: " Password is incorrect",
       });
     }
-
-    res.status(200).json({ message: "Login successful" });
-    
+    res.status(200).json({ message: "Login successful", token });
   } catch (error) {
     console.error("Database error:", error);
     return res.status(500).json({
-        "message": "Server could not login because database connection"
-      });
+      message: "Server could not login because database connection",
+    });
   }
-    
-  });
-  
-export default loginRouter 
+});
+
+export default loginRouter;
+
+// import { Router } from "express";
+// import connectionPool from "../utils/db.mjs";
+// import bcrypt from "bcrypt";
+// import jwt from "jsonwebtoken";
+
+// const loginRouter = Router();
+
+// loginRouter.post("/", async (req, res) => {
+//   const { usernameOrEmail, password } = req.body;
+//   if (!usernameOrEmail?.trim() || !password?.trim()) {
+//     return res.status(400).json({
+//       code: "U002",
+//       message: "Email or Username and Password cannot be null",
+//     });
+//   }
+
+//   try {
+//     const result = await connectionPool.query(
+//       `SELECT * FROM user_profiles WHERE email = $1 OR username = $1`,
+//       [usernameOrEmail]
+//     );
+//     const user = result.rows[0];
+//     if (!user) {
+//       return res.status(404).json({
+//         code: "U001",
+//         message: "Email or Username and Password is incorrect",
+//       });
+//     }
+
+//     const match = await bcrypt.compare(password, user.password);
+//     if (!match) {
+//       return res.status(404).json({
+//         code: "U001",
+//         message: "Password is incorrect",
+//       });
+//     }
+
+//     // Create a JWT token
+//     const token = jwt.sign({ userId: user.id }, "your_secret_key", {
+//       expiresIn: "1h",
+//     });
+
+//     res.status(200).json({ message: "Login successful", token });
+//   } catch (error) {
+//     console.error("Database error:", error);
+//     return res.status(500).json({
+//       message: "Server could not login because of a database error",
+//     });
+//   }
+// });

@@ -5,10 +5,10 @@ function RegisterForm() {
   const [hobbiesList, setHobbiesList] = useState([]);
   const [hobby, setHobby] = useState("");
   const [location, setLocation] = useState("");
-  const [city, setCity] = useState("");
+  // const [city, setCity] = useState("");
   const [cityList, setCityList] = useState([]);
-  const [isSecondImage, setIsSecondImage] = useState(false);
-  const [isMobilePreview, setIsMobilePreview] = useState(false);
+  // const [isSecondImage, setIsSecondImage] = useState(false);
+  // const [isMobilePreview, setIsMobilePreview] = useState(false);
   const locationDB = countryDB.data.map((item) => item.country_name);
   const sexDB = ["male", "female", "other"];
   const raceDB = ["Asian", "Black", "White", "Middle east"];

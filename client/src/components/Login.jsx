@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import ImgLogin from "../assets/images/loginpage.png";
 import ImgCercle from "../assets/images/cercleloginpage.png";
 
@@ -53,7 +53,7 @@ const Login = () => {
           </div>
           <div>
             <h4 className="text-[16px] text-black mt-[40px] text-center">
-              Don't have account?
+              Dont have an account?
               <span className="cursor-pointer text-[#C70039] font-bold">
                 Register
               </span>
