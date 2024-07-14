@@ -45,10 +45,12 @@ function MerryListView() {
               <p>Merry to match</p>
             </div>
           </div>
-          <div className=" flex justify-end">
-            <div>
-              <p>Merry limit today</p>
-            </div>
+          <div>
+            <p className=" text-gray-700">
+              Merry limit today
+              <span className=" ">{`${2}/${20}`}</span>
+            </p>
+            <p className=" text-gray-600">Reset in {12}h</p>
           </div>
         </div>
       </section>
