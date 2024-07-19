@@ -2,8 +2,10 @@ import { Router } from "express";
 import connectionPool from "../utils/db.mjs";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 
 const loginRouter = Router();
+dotenv.config();
 
 loginRouter.post("/", async (req, res) => {
   const { usernameOrEmail, password } = req.body;
@@ -35,17 +37,26 @@ loginRouter.post("/", async (req, res) => {
       });
     }
 
-    const token = jwt.sign({ userId: user.id }, "your_secret_key", {
-      expiresIn: "1h",
-    });
+    const token = jwt.sign(
+      { userId: user.id },
+      process.env.REACT_APP_SUPABASE_KEY,
+      {
+        expiresIn: "1h",
+      }
+    );
 
-    res.status(200).json({code: "U000", message: "Login successfully", token });
+    console.log(token);
+    console.log(process.env.REACT_APP_SUPABASE_KEY);
+
+    res
+      .status(200)
+      .json({ code: "U000", message: "Login successfully", token });
   } catch (error) {
+    console.log(error);
     return res.status(500).json({
       message: "Server could not login because of a database error",
     });
   }
-
 });
 
 export default loginRouter;
