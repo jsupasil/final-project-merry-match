@@ -3,12 +3,13 @@ import connectionPool from "./src/utils/db.mjs";
 import registerRouter from "../server/src/routes/register.mjs";
 import profileRouter from "../server/src/routes/profile.mjs";
 import loginRouter from "../server/src/routes/login.mjs";
-import stripeRouter from "../server/src/routes/payment.mjs"
+import stripeRouter from "../server/src/routes/payment.mjs";
 import supabase from "./lib/supabase.js";
 import cors from "cors";
 import uploadImg from "./src/controllers/Upload.js";
-import authRouter from "./src/routes/auth.mjs";
+import authRouter from "./src/apps/auth.mjs";
 import dotenv from "dotenv";
+import { protect } from "./src/middlewares/protect.mjs";
 // import { cloudinaryUpload } from "./src/controllers/Upload.js";
 
 dotenv.config();
@@ -22,7 +23,11 @@ app.use("/register", registerRouter);
 app.use("/profile", profileRouter);
 app.use("/login", loginRouter);
 app.use("/auth", authRouter);
-app.use("/", stripeRouter)
+app.use("/", stripeRouter);
+
+app.use("/profile", profileRouter);
+
+app.use(protect);
 
 //เรียกใช้ api สำหรับ ยิง postman to cloudinary
 app.use("/api/admin", uploadImg);
@@ -359,10 +364,6 @@ app.delete("/admin/delete/:package_id", async (req, res) => {
 //     });
 //   }
 // });
-
-
-
-
 
 app.listen(port, () => {
   console.log(`Server is running at ${port}`);
