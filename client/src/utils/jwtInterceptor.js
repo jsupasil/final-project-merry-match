@@ -4,7 +4,10 @@ function jwtInterceptor() {
   axios.interceptors.request.use((req) => {
     const token = window.localStorage.getItem("token");
     if (token) {
-      req.headers.Authorization = `Bearer ${token}`;
+      req.headers = {
+        ...req.headers,
+        Authorization: `Bearer ${token}`,
+      };
     }
     return req;
   });
