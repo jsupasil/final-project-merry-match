@@ -23,10 +23,14 @@ function AuthProvider(props) {
     user: getDataFromToken(),
   });
 
+  const navigate = useNavigate();
+
   const login = async (data) => {
     try {
       setState({ ...state, error: null, loading: true });
+      console.log(data);
       const result = await axios.post("http://localhost:4001/auth/login", data);
+      console.log(result);
       const token = result.data.token;
       localStorage.setItem("token", token);
       const user = jwtDecode(token);
@@ -42,7 +46,6 @@ function AuthProvider(props) {
       console.log(error);
       setState({
         ...state,
-        error: error.response.data.message,
         loading: false,
       });
     }

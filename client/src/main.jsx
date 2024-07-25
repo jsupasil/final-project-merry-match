@@ -4,18 +4,16 @@ import App from "./App.jsx";
 import "./index.css";
 import jwtInterceptor from "./utils/jwt-interceptor.jsx";
 import { BrowserRouter } from "react-router-dom";
-// import { AuthProvider } from "./context/auth.jsx";
+import { AuthProvider } from "./context/auth.jsx";
 
 jwtInterceptor();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <AuthProvider> */}
     <BrowserRouter>
-      {/* <AuthProvider> */}
+      <AuthProvider>
         <App />
-      {/* </AuthProvider> */}
+      </AuthProvider>
     </BrowserRouter>
-    {/* </AuthProvider> */}
   </React.StrictMode>
 );
