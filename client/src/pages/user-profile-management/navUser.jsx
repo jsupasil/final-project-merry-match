@@ -12,7 +12,7 @@ import Profile from "../user-profile-management/images/Profile.png";
 import exit from "../user-profile-management/images/exit.png";
 import { useNavigate } from "react-router-dom";
 
-// import { useAuth } from "../../context/auth";
+import { useAuth } from "../../context/auth";
 
 function NavUser() {
   const { logout } = useAuth();
@@ -44,10 +44,10 @@ function NavUser() {
               className="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow "
             >
               <li>
-                <Link>Start Matching</Link>
+                <button>Start Matching</button>
               </li>
               <li>
-                <Link>Merry Member</Link>
+                <button>Merry Member</button>
               </li>
             </ul>
           </div>
@@ -125,15 +125,15 @@ function NavUser() {
       </div>
       <div className="flex-none hidden md:flex space-x-6 content-start gap-6 ">
         <div className="dropdown dropdown-end  md:flex space-x-6 content-start gap-6 ">
-          <Link
-            to={"/matching"}
+          <button
+            onClick={() => navigate("/matching")}
             className="text-red-800 content-center md:text-[12px] lg:text-[18px]"
           >
             Start Matching
-          </Link>
-          <Link className="text-red-800 content-center md:text-[12px] lg:text-[18px]">
+          </button>
+          <button className="text-red-800 content-center md:text-[12px] lg:text-[18px]">
             Merry Member
-          </Link>
+          </button>
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
@@ -215,7 +215,7 @@ function NavUser() {
             <li id="list-5">
               <button
                 onClick={() => {
-                  // logout();
+                  logout();
                 }}
               >
                 <img src={exit} alt="logout" className="w-[16px]" />

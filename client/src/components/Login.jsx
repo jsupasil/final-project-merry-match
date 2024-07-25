@@ -3,14 +3,14 @@ import ImgCercle from "../assets/images/cercleloginpage.png";
 import Nav from "../pages/non-user/nav";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-// import { useAuth } from "../context/auth";
+import { useAuth } from "../context/auth";
 
 const Login = () => {
   const [userInfo, setUserInfo] = useState({
     usernameOrEmail: "",
     password: "",
   });
-  // const { login, state } = useAuth();
+  const { login, state } = useAuth();
   const [errors, setErrors] = useState({});
 
   const handleLogin = async (event) => {
@@ -30,10 +30,10 @@ const Login = () => {
 
     try {
       console.log(userInfo);
-      // login({
-      //   username: userInfo.usernameOrEmail,
-      //   password: userInfo.password,
-      // });
+      login({
+        username: userInfo.usernameOrEmail,
+        password: userInfo.password,
+      });
     } catch (error) {
       console.error("Error submitting form:", error);
       setErrors({ submit: "There was an error submitting the form" });
@@ -113,15 +113,13 @@ const Login = () => {
               )}
             </div>
             <div className="lg:flex lg:justify-center mt-[30px]">
-              <Link>
-                <button
-                  id="login-btn"
-                  className="text-white bg-[#C70039] h-[48px] w-[343px] text-[16px] rounded-full lg:mx-auto"
-                  onClick={handleLogin}
-                >
-                  Log in
-                </button>
-              </Link>
+              <button
+                id="login-btn"
+                className="text-white bg-[#C70039] h-[48px] w-[343px] text-[16px] rounded-full lg:mx-auto"
+                onClick={handleLogin}
+              >
+                Log in
+              </button>
             </div>
             <div>
               <h4 className="text-[16px] text-black mt-[40px] text-center">
