@@ -6,7 +6,7 @@ import stripeRouter from "../server/src/routes/payment.mjs";
 import supabase from "./lib/supabase.js";
 import cors from "cors";
 import uploadImg from "./src/controllers/Upload.js";
-import authRouter from "./src/apps/auth.mjs";
+import authRouter from "./src/routes/auth.mjs";
 import dotenv from "dotenv";
 import { protect } from "./src/middlewares/protect.mjs";
 import profilesRouter from "./src/apps/profiles.mjs";
