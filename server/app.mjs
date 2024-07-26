@@ -34,7 +34,7 @@ app.use("/auth", authRouter);
 app.use("/payments", stripeRouter);
 app.use("/profiles", profilesRouter);
 
-app.use(protect);
+// app.use(protect);
 
 //เรียกใช้ api สำหรับ ยิง postman to cloudinary
 app.use("/api/admin", uploadImg);
