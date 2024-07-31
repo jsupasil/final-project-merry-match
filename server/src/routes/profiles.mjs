@@ -27,7 +27,7 @@ profilesRouter.get("/", async (req, res) => {
   }
 });
 
-profilesRouter.get("/view/:profile_id", async (req, res) => {
+profilesRouter.get("/:profile_id", async (req, res) => {
   const profile_id = req.params.profile_id;
   try {
     const profileData = await connectionPool.query(
@@ -47,7 +47,6 @@ profilesRouter.get("/view/:profile_id", async (req, res) => {
       hobbiesList: hobbiesList,
     });
 
-    console.log(profile);
 
     return res.status(200).json({
       code: "U000",
