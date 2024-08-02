@@ -73,7 +73,7 @@ const AdminPageList = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <section className="w-[90%] px-4 py-4 bg-white border-b border-gray-300 mx-auto">
+    <section className="lg:w-[85%] px-4 py-4 bg-white border-b border-gray-300 mx-auto">
       <div className="flex flex-col lg:flex-row justify-between items-center">
         <div className="text-slate-800 text-2xl font-bold leading-[30px] mb-4 lg:mb-0">
           Merry Package
