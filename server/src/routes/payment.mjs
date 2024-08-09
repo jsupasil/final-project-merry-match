@@ -246,4 +246,61 @@ stripeRouter.put("/update", express.json(), async (req, res) => {
   }
 });
 
+
+const getPaymentIntent = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const order = await connectionPool.query(
+      `SELECT payment_intent_id FROM orders WHERE order_id = $1`,
+      [id]
+    );
+
+    if (!order.rows.length) {
+      return res.status(404).json({ message: 'ไม่พบคำสั่งซ่อมในคำขอ' });
+    }
+
+    const { payment_intent_id } = order.rows[0];
+
+    const paymentIntent = await stripe.paymentIntents.retrieve(
+      payment_intent_id
+    );
+
+    return res.status(200).json({
+      message: 'ดึงข้อมูล payment intent สำเร็จ',
+      clientSecret: paymentIntent.client_secret
+    });
+  } catch (error) {
+    console.error('Error retrieving PaymentIntent:', error);
+    return res
+      .status(500)
+      .json({ message: 'เกิดข้อผิดพลาดในการดึงข้อมูลการชำระเงิน' });
+  }
+};
+
+const successPaymentOrder = async (req, res) => {
+  const { id } = req.params;
+  const successText = 'success';
+
+  try {
+    const result = await connectionPool.query(
+      `UPDATE orders
+      set payment_status = $1
+      where order_id = $2
+      RETURNING *`,
+      [successText, id]
+    );
+
+    if (result.rowCount === 0) {
+      return res.status(404).json({ message: 'ไม่พบคำสั่งซ่อมในคำขอ' });
+    }
+
+    return res.status(200).json({ message: 'ปรับปรุงสถานะทางการเงินสำเร็จ' });
+  } catch (error) {
+    return res.status(500).json({
+      message: 'พบข้อผิดพลาดภายในเซอร์เวอร์'
+    });
+  }
+};
+
 export default stripeRouter;
