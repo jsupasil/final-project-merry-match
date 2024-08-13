@@ -41,7 +41,7 @@ io.on("connection", (socket) => {
 
   socket.on("join_room", (room) => {
     // console.log(room);
-    
+
     socket.join(room);
     // console.log(`User joined room: ${room}`);
 
@@ -551,6 +551,31 @@ app.put("/admin/edit/complaint/:complaint_id", async (req, res) => {
     });
   }
 });
+
+// get date package membership page
+app.get("/membership", async (req, res) => {
+  console.log(req.body.name);
+  
+  try {
+    const memberShipData = await connectionPool.query(
+      `SELECT pt.name, pt.package_name, pt.created_date, p.merry_limit, p.icons, p.detail, p.price
+      FROM payment_test pt
+      LEFT JOIN packages p on p.packages_name = pt.package_name 
+      WHERE pt.name = $1 AND pt.status = 'success' 
+      ORDER BY pt.created_date DESC LIMIT 1`, [req.body.name] 
+    );
+
+    const data = memberShipData.rows[0] ?? {}; 
+    // console.log(memberShipData);
+    
+    return res.status(200).json({ data });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      message: "Server could not get data",
+    });
+  }
+})
 
 server.listen(port, () => {
   console.log(`Server is running at ${port}`);
